@@ -41,3 +41,9 @@ class ControladorResultado():
         return self.repositorioResultado.save(elResultado)
     def delete(self,id):
         return self.repositorioResultado.delete(id)
+
+    ########################################################
+    ###### OBTENER LA LISTA DE CANDIDATOS EN UNA MESA ######
+    ########################################################
+    def ListarCandidatosEnMesa(self,id_candidato):
+        return self.repositorioResultado.getListadoResultadosCandidato(id_candidato)

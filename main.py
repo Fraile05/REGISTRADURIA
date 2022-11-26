@@ -51,6 +51,10 @@ def actualizarResultado(id_resultado,id_mesa,id_candidato):
 def eliminarResultado(id_resultado):
     json = miControladorResultado.delete(id_resultado)
     return jsonify(json)
+@app.route("/resultados/candidato/<string:id_candidato>", methods = ['GET'])
+def resultadosenMesa(id_candidato):
+    json = miControladorResultado.ListarCandidatosEnMesa(id_candidato)
+    return jsonify(json)
 
 #########################################################
 ######### VISTAS PARA EL METODO PARTIDO #################
